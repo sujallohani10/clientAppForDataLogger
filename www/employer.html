@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head> <!--html head begins here-->
+		<title>Employer</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">		
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+		<link rel="stylesheet" href="css/jquery.mobile.datepicker.css" />
+		<link rel="stylesheet" href="css/jquery.mobile.datepicker.theme.css" />
+		<link rel="stylesheet" type="text/css" media="screen and (min-device-width: 1000px)" href="css/style.css" />
+	<script src="js/jquery-1.11.1.js"></script>
+	<script src="js/datepicker.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/jquery.mobile.datepicker.js"></script>
+	<script src="js/employer.js"></script>
+	<script src="https://smtpjs.com/v3/smtp.js">
+	</script>
+	</head> <!--end of head-->
+	<body> <!--html body begins here-->
+		<div data-role="page" id="employerPage"> <!-- This is home page view-->
+			<div id="headerEmployer" data-role="header">
+				<h1 id="employerName">Time Logger</h1>
+				<div id="logo">
+					<img src="img/logo.png" alt="time logger logo"></img> 
+				</div>
+			</div>	
+			<div id="contentEmployer">
+				<div id="employerOptions">
+					<h3><a href="#viewDetails" data-role="button" id="viewEmployerDetails">View Your Details</a></h3>
+					<h3><a href="#postRoster" data-role="button" id="postRoster">Post Roster</a></h3>
+					<h3><a href="#workingHours" data-role="button" id="postWorkingHours">Employee Working hours</a></h3>
+					<h3><a href="#sendPaySlip" data-role="button" id="emailPaySlip">Send PaySlip</a></h3>
+					<h3><a href="https://au.indeed.com/" data-role="button" id="createVacancy">Create a new vancancy</a></h3>
+				</div>
+				
+			</div>
+			<div id="footerEmployer">
+				<a href="index.html" target="_blank" data-role="button" data-icon="home" data-direction="fade">Log Out</a>
+			</div>
+			
+		</div> <!-- home page finishes here-->
+
+		<div data-role="page" id="postRoster"> <!-- This is roster page view-->
+			<div id="headerEmployer" data-role="header">
+				<h1 id="employerName">Post Roster</h1>
+				<div id="logo">
+					<img src="img/logo.png" alt="Time logger logo"></img> 
+				</div>
+			</div>	
+			<div id="contentEmployer">
+				<div id="postOptions">
+					<form method="POST">
+						<label for="name" id="tab" class="label-black">Employee Name</label>
+						<select id="employeeName" name="user_name">
+							<option>Select Employee</option>
+					  	</select>
+						
+						<label for="fromdate" id="tab" class="label-black">From Date</label>
+						<input type="text" data-role="date" data-inline="false" id="fromDate" name="fromDate">
+
+						<label for="todate" id="tab" class="label-black">To Date</label>
+						<input type="text" data-role="date" data-inline="false" id="toDate" name="toDate">
+
+            			<label for="Password" id="tab" class="label-black">Roster for next week</label>
+            			<textarea rows="10" cols="20" name="comment" form="usrform" id="rosterData" placeholder="Enter roster details here"></textarea>
+
+            			<h3><a data-role="button" id="postRosterData">Post Roster</a></h3>
+        			</form>
+				</div>
+				
+			</div>
+			<div id="footerEmployer">
+				<a href="#employerPage" data-role="button" data-icon="home" data-direction="fade"> Employer Home</a>
+			</div>
+			
+		</div> <!-- roster page finishes here-->
+
+		<!-- page view employer details-->
+		<div data-role="page" id="viewDetails"> <!-- This is home page view-->
+			<div id="headerEmployer" data-role="header">
+				<h1 id="employeeName">Employer Details</h1>
+				<div id="logo">
+					<img src="img/logo.png" alt="time logger logo"></img> 
+				</div>
+			</div>	
+			<div id="contentEmployee">
+				<div id="employeeOptions">
+					<div id="showemployerDetails">
+						<h1>Employer Name: </h1>
+						<h2><span id="detailName">Data loading...</span></h2>
+					</div>
+					<div id="showemployerDetails">
+						<h1>Phone Number: </h1>
+						<h2><span id="detailNumber">Data loading...</span></h2>
+					</div>
+				</div>
+				
+			</div>
+			<div id="footerEmployee">
+				<a href="#employerPage" data-role="button" data-icon="home" data-direction="fade"> Employer Home</a>
+			</div>
+			
+		</div> <!-- view employer details finishes here-->
+
+
+		<div data-role="page" id="workingHours"> <!-- employee workign hours view-->
+			<div id="headerEmployer" data-role="header">
+				<h1 id="">Post Employee Working hours</h1>
+				<div id="logo">
+					<img src="img/logo.png" alt="Time logger logo"></img> 
+				</div>
+			</div>	
+			<div id="contentEmployer">
+				<div id="postOptions">
+					<form method="POST">
+						<label for="name" id="tab" class="label-black">Employee Name</label>
+						<select id="employee_Name" name="user_name">
+							<option>Select Employee</option>
+					  	</select>
+						
+						<label for="fromdate" id="tab" class="label-black">From Date</label>
+						<input type="text" data-role="date" data-inline="false" id="from_Date" name="from_Date">
+
+						<label for="todate" id="tab" class="label-black">To Date</label>
+						<input type="text" data-role="date" data-inline="false" id="to_Date" name="to_Date">
+
+            			<label for="Password" id="tab" class="label-black">Hours Worked</label>
+            			<input type="text" id="hoursWorked" name="hoursWorked">
+
+            			<h3><a data-role="button" id="btnPostHours">Submit</a></h3>
+        			</form>
+				</div>
+				
+			</div>
+			<div id="footerEmployer">
+				<a href="#employerPage" data-role="button" data-icon="home" data-direction="fade"> Employer Home</a>
+			</div>
+			
+		</div> <!-- working hours page finishes here-->
+
+
+		<div data-role="page" id="sendPaySlip"> <!-- This is payslip page view-->
+			<div id="headerEmployer" data-role="header">
+				<h1 id="employerName">Send PaySlip</h1>
+				<div id="logo">
+					<img src="img/logo.png" alt="Time logger logo"></img> 
+				</div>
+			</div>	
+			<div id="contentEmployer">
+				<div id="postOptions">
+					<form method="POST">
+						<h2>Send Last Week Employee PaySlip</h2>
+
+						<label for="name" id="tab" class="label-black">Employee Name</label>
+						<select id="paySlipEmployeeName" name="user_name">
+							<option value="null">Select Employee</option>
+					  	</select>
+
+            			<h3><a data-role="button" id="btnEmailPay" style="color: red;">Email PaySlip</a></h3>
+        			</form>
+				</div>
+				
+			</div>
+			<div id="footerEmployer">
+				<a href="#employerPage" data-role="button" data-icon="home" data-direction="fade"> Employer Home</a>
+			</div>
+			
+		</div> <!-- send payslip finishes here-->
+
+
+						
+		
+
+	</body> <!--end of body-->
+</html> <!--end of html-->

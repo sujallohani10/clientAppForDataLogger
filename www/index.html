@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head> <!--html head begins here-->
+		<title>Time Logger</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">		
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+		<link rel="stylesheet" type="text/css" media="screen and (min-device-width: 1000px)" href="css/style.css" />
+	<script src="js/jquery-1.11.1.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/index.js"></script>
+	</head> <!--end of head-->
+	<body> <!--html body begins here-->
+		<div data-role="page" id="homePage"> <!-- This is home page view-->
+			<div id="header" data-role="header">
+				<h1>Time Logger</h1>
+				<div id="logo">
+					<img src="img/logo.png" alt="time logger logo"></img> 
+				</div>
+			</div>	
+			<div id="content">
+				<div id="left">
+					<h1>Working made easy</h1>
+					<br/>
+					<hr/>
+					<hr/>
+					<hr/>
+					<hr/>
+					<hr/>
+					<hr/>
+					<hr/>
+					<hr/>
+					<hr/>
+					<hr/>
+					<h3><a href="#signInPage" data-role="button" id="signIn">Create a new Account</a></h3>
+				</div>
+					
+				<div id="right">
+					<form action="index.html" method="POST">
+            			<label for="name" id="tab">Username</label>
+            			<input type="text" id="logInUsername" name="user_name" placeholder="Required">
+
+            			<label for="Password" id="tab">Password</label>
+            			<input type="password" id="logInPassword" name="user_password" placeholder="Required">
+
+            			<label>
+					      <input type="checkbox" checked="checked" name="remember"> Remember me
+					    </label>
+        			</form>
+						<h3><a data-role="button" id="logIn">Log In</a></h3>
+						<span class="psw">Forgot <a href="#" style="color: #ff0066; text-decoration: none">password?</a></span>
+				</div>
+				
+			</div>
+			<div id="footer">
+				<h2>&copy; timeLogger.com</h2>
+			</div>
+			
+		</div> <!-- home page end-->
+
+
+		<div data-role="page" id="signInPage"><!--sign in page starts here-->
+			<div id="header" data-role="header">
+				<h1>Create a new account</h1>
+				<div id="logo">
+					<img src="img/logo.png" alt="time logger logo"></img> 
+				</div>
+			</div>	
+			<div id="contentSignIn">
+				<div id="signInForm">
+					<form action="action_page.php" method="post">
+					  <div class="avatarContainer">
+					    <img src="img/avatar.png" alt="Avatar" class="avatar">
+					  </div>
+
+					  <div class="container">
+					  	<select id="signInType">
+					  		<option>Select how you recognize yourself</option>
+					        <option value="employee">Employee</option>
+					        <option value="employer">Employer</option>
+					    </select>
+					    <label for="uname"><b>Username</b></label>
+					   	<input type="text" placeholder="username" id="username" required>
+
+					    <label for="psw"><b>Password</b></label>
+					    <input type="password" placeholder="password" id="signInPassword" required>
+					    <label for="phoneNumber"><b>Phone number</b></label>
+						<input type="text" placeholder="enter phone number" id="phoneNumber" required>
+						<label for="email"><b>Email</b></label>
+					    <input type="email" placeholder="enter email" id="email" required>
+
+					    <br/>
+					    <a data-role="button" data-direction="reverse" id="createAccount">Create Account</a>
+					    <br/>
+					  </div>
+					</form>
+				</div>	
+			</div>
+			<div id="footer">
+				<a href="#homePage" data-role="button" data-icon="home" data-direction="fade"> Home</a>
+			</div>
+		</div><!--sign in page end-->
+	</body> <!--end of body-->
+</html> <!--end of html-->

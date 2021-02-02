@@ -1,0 +1,195 @@
+/*author: Govinda Lohani*/
+/*targeting boey*/
+body {
+	float: left;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+/*changing header styles*/
+#header, #headerEmployee, #headerEmployer{
+	height: 10vw;
+	margin: 0;
+	background-color: #cccccc;
+  background-image: linear-gradient(grey,tan);
+}
+
+/*hearder home page*/
+#header h1{
+	float: left;
+	color: indigo;
+	font-size: 2em;
+	
+}
+
+/*header employee page*/
+#headerEmployee h1{
+	color: indigo;
+	font-size: 2em;
+	float: left;
+
+}
+
+/*header employer page*/
+#headerEmployer h1{
+	color: indigo;
+	font-size: 2em;
+	float: left;
+
+}
+
+/*changing logo style*/
+#logo{
+	float: left;
+	height: 3vw;
+	width: 5vw;
+}
+
+/*changing content style home page*/
+#content{
+	background-image: url("../img/image.jpeg");
+	}
+
+/*changing content style employee page*/
+#contentEmployee{
+	background-image: url("../img/image.jpeg");
+	padding-bottom: 5vw;
+}
+
+/*changing content style employer page*/
+#contentEmployer{
+	background-image: url("../img/image.jpeg");
+	padding-bottom: 5vw;
+
+}
+
+/*changing content style sign in page*/
+#contentSignIn{
+	background-image: url("../img/workplace5.jpg");
+}
+
+/*changing style of sign in form*/
+#signInForm{
+	margin-left:10vw;
+	margin-right:10vw;
+	color: #cc3300;
+}
+
+/*changing style of avatar image*/
+.avatarContainer{
+	text-align: center;
+}
+
+.avatarContainer img{
+	height: 20vw;
+	border-radius: 50%;
+}
+
+
+/*changing footer style home page*/
+#footer{
+	text-align: center;
+	clear: both;
+	color: blue;
+	background-color: tan;
+	padding: 0.5vw;
+}
+
+/*changing footer style employee page*/
+
+#footerEmployee{
+	text-align: center;
+	clear: both;
+	color: blue;
+	background-color: tan;
+	height: 5vw; 
+	padding: 0.5vw;
+}
+
+/*changing cfooter style employer page*/
+
+#footerEmployer{
+	text-align: center;
+	clear: both;
+	color: blue;
+	background-color: tan;
+	height: 5vw; 
+	padding: 0.5vw;
+}
+
+/*changing content style home page*/
+
+#content{
+	width: 100%;
+	padding-bottom: 3vw;
+	}
+
+/*changing content style home page column layout*/
+
+#left{
+	float: left;
+	width: 65%;
+	padding-top: 2vw;
+	padding-left: 1vw;
+}
+
+/*changing content style home page column layout*/
+
+#right{
+	width: 30%;
+	vertical-align: top;
+	overflow: hidden;
+	padding-left: 2.5vw;
+	padding-top: 5vw;
+}
+
+/* color of label black */
+.label-black {
+	color: black;
+}
+
+/*changing options*/
+
+
+#employeeOptions, #employerOptions{
+	margin-left: 5vw;
+	margin-right: 5vw;
+	padding-top: 5vw;
+}
+
+/*changing view detils page of employee*/
+
+#showRoster{
+	margin-left:5vw;
+	color: red;
+}
+
+/*changing view detils page of employer*/
+#postOptions{
+	padding-top: 5vw;
+	margin-left: 20vw;
+	margin-right: 20vw;
+
+}
+
+/*header employee page*/
+#payDetails{
+	color: #ff0808;
+	font-weight: bold;
+}
+
+/*writing media query*/
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+
+  #logo{
+  	display: none;
+  }
+}
+
+
+
